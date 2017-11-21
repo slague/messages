@@ -1,0 +1,23 @@
+<nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" href="#">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGkEV-UCg1ELAFRB_lm6Q6Y_iF_Ca5jRE0c7mTpmUYKqSw5mwe" width="70" height="70" class="d-inline-block align-top" alt="">
+  </a>
+  <a href= "<%=messages_path%>">See all messages</a>
+</nav>
+
+<div class="container" style="padding:50px">
+    <%= form_for @message do |f| %>
+    <h3>Write your messsage here:</h3>
+    <div style="padding-bottom:15px">
+      <%= f.text_area :text, size: "50x15" %><br>
+    </div>
+      <div style="padding-bottom:15px">
+        <%= f.label :sender %>
+        <%= f.text_field :sender %><br>
+      </div>
+      <div>
+        <%= f.submit class: 'btn btn-primary'%>
+    </div>
+    <% end %><br>
+  </div>
+</div>
