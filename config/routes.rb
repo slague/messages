@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :messages, only: [:index, :new, :create]
 
   namespace :api do
+    get '/messages/random', to: 'messages_random#show'
     resources :messages, only: [:index]
   end
 end
